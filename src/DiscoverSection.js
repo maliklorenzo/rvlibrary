@@ -21,7 +21,7 @@ function DiscoverSection(props) {
                 </div>
                 { props.searchTerm.length === 0 ? (
                   <div className="small-1 columns">
-                    <label htmlFor="searchInput" className="postfix searchLabel">Search</label>
+                    <label htmlFor="searchInput" className="postfix searchLabel"><i className="fa fa-search" aria-hidden="true"></i></label>
                   </div>
                 ) : (
                   <div className="small-1 columns">
@@ -39,5 +39,3 @@ function DiscoverSection(props) {
 }
 
 export default DiscoverSection;
-
-

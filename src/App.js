@@ -81,11 +81,12 @@ class App extends Component {
           </header>
         </div>
         <div className="contentContainer row">
-          <main className="small-12 medium-9 columns">
+          <main className="small-12 medium-9 large-9 columns">
             { !this.state.showSearch ? (
               <div>
                 <section className="welcomeSection columns">
                   <h2 className="welcome">Welcome, Joe Library User!</h2>
+
                   <p>Welcome to the very much still in development Curve Library software. Over the next few months, the Road to Hire and ITA students will be working to make this much more full featured. In the meantime, you may use the categories on the right to search our collections or you can search for individual items using the search bar above.</p>
                 </section>
                 <section className="recommendations columns">
@@ -114,8 +115,8 @@ class App extends Component {
 
               ) : (
                 <section className="searchResults columns">
-                  <h2 className="subheader"><small>Search Results</small> <button className="button tiny" onClick={this.handleClearSearch}>Reset</button></h2>
-                    <p className="searchTerm">Your search for "{this.state.searchCategory.length ? this.state.searchCategory : ( this.state.searchTerm )}" resulted in {this.state.searchResults.length} results.</p>
+                  <h2 className="subheader"><small>Search Results</small></h2>
+                  <p className="searchTerm">Your search for "{this.state.searchCategory.length ? this.state.searchCategory : ( this.state.searchTerm )}" resulted in {this.state.searchResults.length} results.</p>
                     { this.state.searchResults.map(function(resource, i) {
                       return (
                         <Recommendation
@@ -132,7 +133,7 @@ class App extends Component {
             }
 
           </main>
-          <aside className="small-12 medium-3 columns">
+          <aside className="small-12 medium-3 large-3 columns">
             <h2 className="getInspired">Get Inspired</h2>
             <ul className="collectionList">
               <li><a href="/" className="collectionGroup" onClick={this.handleSearchByCategory}>Browse All</a></li>
